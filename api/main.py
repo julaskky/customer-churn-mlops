@@ -13,7 +13,14 @@ from pydantic import BaseModel, Field
 
 
 MODEL_PATH = Path(
-    os.getenv("MODEL_PATH", "/app/models/registered_model")
+    os.getenv(
+        "MODEL_PATH",
+        str(
+            Path(__file__).resolve().parent.parent
+            / "models"
+            / "registered_model"
+        )
+    )
 )
 
 app = FastAPI(
