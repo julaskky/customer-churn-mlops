@@ -1,0 +1,40 @@
+
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# MLflow tracking database and generated artifacts
+mlflow.db
+mlflow.db-*
+mlruns/
+artifacts/
+mlflow_outputs/
+
+# Dataset and generated EDA outputs
+dataset/
+eda_outputs/
+
+# Model files: retain only the exported registered model
+models/*
+!models/registered_model/
+!models/registered_model/**
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary file
+New Text Document.txt

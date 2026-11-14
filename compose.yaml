@@ -1,0 +1,12 @@
+
+services:
+  churn-api:
+    build: .
+    container_name: customer-churn-api
+    ports:
+      - "8000:8000"
+    environment:
+      MLFLOW_TRACKING_URI: http://host.docker.internal:5000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped

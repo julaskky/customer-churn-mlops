@@ -1,0 +1,16 @@
+
+.venv/
+__pycache__/
+.pytest_cache/
+.git/
+dataset/
+eda_outputs/
+mlruns/
+mlflow_outputs/
+artifacts/
+models/*
+!models/registered_model/
+!models/registered_model/**
+mlflow.db
+tests/
+*.pyc
