@@ -35,5 +35,7 @@ jobs:
           pip install pytest==9.2.0 httpx
 
       - name: Run automated tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: |
-          pytest -v
+          python -m pytest -v
